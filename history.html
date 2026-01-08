@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker | History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="history.html" class="active">History</a>
+    </nav>
+
+    <div class="container">
+        <h1>Transaction History</h1>
+        
+        <div class="history-summary">
+            <span>Filtered Total: </span>
+            <span id="historyTotalDisplay" style="font-weight: bold; color: #ef4444;">$0.00</span>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Search category or description..." onkeyup="filterHistory()">
+        
+        <div id="historyList" class="history-container"></div>
+        
+        <button onclick="resetData()" class="reset-btn">Clear All Records</button>
+    </div>
+    <script src="script.js"></script>
+    <script>window.onload = displayHistory;</script>
+</body>
+</html>
