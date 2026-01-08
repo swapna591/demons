@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="history.html">History</a>
+    </nav>
+
+    <div class="container">
+        <div class="summary-card">
+            <h3>Total Spent This Month</h3>
+            <h1 id="monthlyTotalDisplay">$0.00</h1>
+        </div>
+
+        <div class="main-layout">
+            <div class="chart-section">
+                <canvas id="expenseChart"></canvas>
+            </div>
+
+            <form id="expenseForm">
+                <h3>Log Expense</h3>
+                <div class="input-field"><label>Date</label><input type="date" id="dateInput" required></div>
+                <div class="input-field"><label>Amount ($)</label><input type="number" id="amountInput" step="0.01" required></div>
+                <div class="input-field">
+                    <label>Category</label>
+                    <select id="categoryInput">
+                        <option value="Food">Food & Dining</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Health">Health</option>
+                    </select>
+                </div>
+                <div class="input-field"><label>Description</label><input type="text" id="descInput" placeholder="Optional notes"></div>
+                <button type="submit" class="save-btn">Save Expense</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
